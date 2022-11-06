@@ -1,1 +1,33 @@
-@import 'reset.css';
+/* @import "reset.css"; */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap");
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  /* margin-top: -10rem; */
+}
+.countdown-container {
+  display: flex;
+}
+.big-text {
+  font-size: 6rem;
+  line-height: 1;
+  margin: 0 2rem;
+}
+
+.countdownEl {
+  text-align: center;
+}
+.countdownEl span {
+  font-size: 1.5rem;
+}
