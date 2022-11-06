@@ -42,13 +42,21 @@ setInterval(countDown, 1000);
 
 // snowflakes
 createSnowflake();
-setInterval(createSnowflake, 100);
+setInterval(createSnowflake, 50);
 
 function createSnowflake() {
   const snowFlake = document.createElement("i");
   snowFlake.classList.add("fa");
   snowFlake.classList.add("fa-snowflake-o");
   snowFlake.style.left = Math.random() * window.innerWidth + "px";
+
+  // random animation duration
+  //between 2 and 5 secs
+  snowFlake.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+  //snow oppacity
+  snowFlake.style.opacity = Math.random();
+  snowFlake.style.fontSize = Math.random() * 10 + 10 + "px";
 
   document.body.appendChild(snowFlake);
 
