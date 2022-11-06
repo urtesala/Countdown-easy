@@ -1,23 +1,29 @@
 /* @import "reset.css"; */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 
 body {
   font-family: "Raleway", sans-serif;
+  background-color: grey;
   background-image: url();
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   margin: 0;
 }
 h1 {
   font-size: 4rem;
   font-weight: 300;
+  position: relative;
+  z-index: 2;
   /* margin-top: -10rem; */
 }
 .countdown-container {
   display: flex;
+  position: relative;
+  z-index: 2;
 }
 .big-text {
   font-size: 6rem;
@@ -30,4 +36,18 @@ h1 {
 }
 .countdownEl span {
   font-size: 1.5rem;
+}
+
+/* snowflake */
+
+.fa-snowflake-o {
+  color: snow;
+  position: absolute;
+  /* top: -20px; */
+  animation: fall 4s linear forwards;
+}
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
 }

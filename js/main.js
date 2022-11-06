@@ -39,3 +39,20 @@ function zeroBefore(time) {
 countDown();
 
 setInterval(countDown, 1000);
+
+// snowflakes
+createSnowflake();
+setInterval(createSnowflake, 100);
+
+function createSnowflake() {
+  const snowFlake = document.createElement("i");
+  snowFlake.classList.add("fa");
+  snowFlake.classList.add("fa-snowflake-o");
+  snowFlake.style.left = Math.random() * window.innerWidth + "px";
+
+  document.body.appendChild(snowFlake);
+
+  setTimeout(() => {
+    snowFlake.remove();
+  }, 5000);
+}
